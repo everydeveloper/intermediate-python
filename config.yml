@@ -78,20 +78,13 @@ steps:
           with: 03-unlucky.md
           data: 
             rollNum: '%payload.comment.body%'
-        - type: respond
-          with: 03-input.md
       - type: respond
         with: 03-lucky.md
         data: 
           rollNum: '%payload.comment.body%'
-      - type: respond
-        with: 03-input.md
-        issue: 3
-        data: 
-          rollNum: '%payload.comment.body%'
 
-  - title: Rolling multiple Dice
-    description: Roll multiple dice and add their results
+  - title: Adding User Input
+    description: Allow users to input the number and size of dice
     event: push
     link: "{{ repoUrl }}/issues/3"
     actions:
