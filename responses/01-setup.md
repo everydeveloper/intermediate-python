@@ -23,4 +23,6 @@ Inside the repo you'll see two files:
 - `README.md`: a markdown file that details some info about the project
 - `dice-roller.py`: a Python file containing the code you'll be building off of
 
-Now that we have everything we need, we can actually begin writing our dice roller! Let's begin!
+Now that we have everything we need, we can actually begin writing our dice roller! Let's begin! 
+
+Leave a comment with *your favorite dice-rolling game* to continue.

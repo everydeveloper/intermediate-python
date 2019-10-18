@@ -22,6 +22,8 @@ steps:
       - type: respond
         with: 01-running.md
         issue: 1
+        data:
+          game: '%payload.comment.body%'
 
   - title: Running a Python program
     description: Run a python program with a main method
@@ -35,7 +37,7 @@ steps:
         issue: 1
       - type: createIssue
         title: Using Variables 
-        body: 02-model.md
+        body: 02-variables.md
 
   - title: Using Variables
     description: Define variables with random input to simulate a die-roll

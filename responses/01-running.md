@@ -1,3 +1,5 @@
+{{ game }}! Wow that's a classic! You might be able to make a version of {{ game }} when we are done!
+
 ## Running a Python file
 
 Let's look at our Python file. Inside we see a function `main` that will contain all of your commands as you create the dice roller:
