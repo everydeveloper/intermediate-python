@@ -71,7 +71,7 @@ steps:
         left: '%payload.comment.body%'
         operator: <
         right: 6
-        else: respond
+        else:
         - type: respond
           with: 03-unlucky.md
           data: 
