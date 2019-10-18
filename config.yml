@@ -72,12 +72,18 @@ steps:
       - type: gate
         left: '%payload.comment.body%'
         operator: <
-        right: 6
+        right: 3
         else:
         - type: respond
           with: 03-unlucky.md
           data: 
             rollNum: '%payload.comment.body%'
+        - type: respond
+          with: 03-input.md
+      - type: respond
+        with: 03-lucky.md
+        data: 
+          rollNum: '%payload.comment.body%'
       - type: respond
         with: 03-input.md
         issue: 3
@@ -94,4 +100,3 @@ steps:
         issue: 3
       - type: closeIssue
         issue: 3
-

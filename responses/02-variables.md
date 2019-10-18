@@ -14,9 +14,7 @@ We'll want to print that variable, too, so let's change the print function to re
 print(f'You rolled a {roll}')
 ```
 
-Run the code again, and it should say `You rolled a 5`. Nice! Now we're getting a number. Go ahead and `push` your code with the output as the comment within `commit` to move on. 
-
-A die that only rolls 5's isn't useful though, so let's add in the randomness that dice are used for.
+Run the code again, and it should say `You rolled a 5`. Nice! Now we're getting a number. A die that only rolls 5's isn't useful though, so let's add in the randomness that dice are used for.
 
 
 ## Randomizing Variables

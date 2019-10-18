@@ -34,7 +34,7 @@ import random
 dice_rolls = 2
 for i in range(0,dice_rolls):
   roll = random.randint(1,6)
-  print(f'You rolled a {roll}')`
+  print(f'You rolled a {roll}')
 ```
 
 In most game situations, rolling multiple dice is followed by adding their values together. Let's do that now. In Python, arithmetic can be performed on variables just by using the equivalent mathematical symbols. Want to add two variables together? It's as simple as: `variable_sum = variable_1 + variable_2`. Since our dice values are stored in a single updating variable instead of separate variables, however, we'll have to add the values upon themselves. First, make a variable called dice_sum above the `for` loop, and set it equal to 0:
@@ -59,6 +59,18 @@ It doesn't matter which version you prefer, just go with whichever way is easier
 ```python
 print('You have rolled a total of {dice_sum}')
 ```
-If you save and run the file, you'll now get the values of the two dice rolls and their combined sum. Neat!
+Make sure this statement is not indented (since that would include it in the for loop). Overall, your code should look like this:
 
-*[push your code]({{ repoUrl }}/issues/1) to GitHub to continue*
+```python
+import random
+dice_rolls = 2
+dice_sum = 0
+for i in range(0,dice_rolls):
+  roll = random.randint(1,6)
+  dice_sum += roll
+  print(f'You rolled a {roll}')
+print('You have rolled a total of {dice_sum}')
+```
+If you save and run the file, you'll now get the values of the two dice rolls and their combined sum. Now our code is developing some complexity!
+
+*[Push your code]({{ repoUrl }}/issues/1) to GitHub to continue*
