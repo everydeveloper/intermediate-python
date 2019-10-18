@@ -71,10 +71,11 @@ steps:
         left: '%payload.comment.body%'
         operator: <
         right: 6
-          - else: respond
-            with: 03-unlucky.md
-            data: 
-              rollNum: '%payload.comment.body%'
+        else: respond
+        - type: respond
+          with: 03-unlucky.md
+          data: 
+            rollNum: '%payload.comment.body%'
       - type: respond
         with: 03-input.md
         issue: 3
