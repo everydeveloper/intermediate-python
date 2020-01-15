@@ -23,10 +23,9 @@ elif roll == 6:
   print(f'You rolled a {roll}! Critical Success!')
 ```
 
-With the conditionals added, your code should look something like this:
+With the conditionals added, your main function should look something like this:
 
 ```python
-import random
 dice_rolls = 2
 dice_sum = 0
 for i in range(0,dice_rolls):

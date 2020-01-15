@@ -12,8 +12,8 @@ def main():
 Below that, you'll see an `if` statement calling that function:
 
 ```python
-`if __name__== "__main__":
-    main()`
+if __name__== "__main__":
+    main()
 ```
 By doing this, the function `main` will run whenever you run the Python script. As you develop the dice roller, be sure to only manipulate the code within the `main` function; nothing else will need to be changed. 
 

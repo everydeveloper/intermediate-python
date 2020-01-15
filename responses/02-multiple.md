@@ -27,10 +27,9 @@ We would then have a set of commands it would do for every `i`. We already have 
 
 ## Manipulating Variables
 
-With a `for` loop implemented, your code takes the form of this:
+With a `for` loop implemented, your main function takes this form:
 
 ```python
-import random
 dice_rolls = 2
 for i in range(0,dice_rolls):
   roll = random.randint(1,6)
@@ -57,20 +56,24 @@ dice_sum += roll
 
 It doesn't matter which version you prefer, just go with whichever way is easier for you to visualize. Finally, let's print out our final value for `dice_sum`. After the `for` loop is finished, type:
 ```python
-print('You have rolled a total of {dice_sum}')
+print(f'You have rolled a total of {dice_sum}')
 ```
-Make sure this statement is not indented (since that would include it in the for loop). Overall, your code should look like this:
+Make sure this statement is not indented (since that would include it in the for loop). Overall, your main function should look like this:
 
 ```python
-import random
 dice_rolls = 2
 dice_sum = 0
 for i in range(0,dice_rolls):
   roll = random.randint(1,6)
   dice_sum += roll
   print(f'You rolled a {roll}')
-print('You have rolled a total of {dice_sum}')
+print(f'You have rolled a total of {dice_sum}')
 ```
 If you save and run the file, you'll now get the values of the two dice rolls and their combined sum. Now our code is developing some complexity!
 
-*[Push your code]({{ repoUrl }}/issues/1) to GitHub to continue*
+**Push your code** to GitHub to continue:
+```
+git add dice_roller.py
+git commit -m "Now rolling two dice"
+git push
+```

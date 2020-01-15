@@ -1,9 +1,8 @@
 title: Intermediate Python
-tagline: Create a REST api with Node.js, Express.js, and MongoDB
+tagline: 'Random numbers, variables, and conditionals'
 description: Learn how to create a dice-rolling app with Python!
 tags:
   - Python
-
 template:
   name: intermediate-python-course
   repo: intermediate-python-course-template
@@ -12,48 +11,44 @@ before:
   - type: createIssue
     title: Set up your project
     body: 01-setup.md
-
 steps:
   - title: Set up your project
     description: Introduces the project and how to set it up
     event: issue_comment
-    link: "{{ repoUrl }}/issues/1"
-    actions: 
+    link: '{{ repoUrl }}/issues/1'
+    actions:
       - type: respond
         with: 01-running.md
         issue: 1
         data:
           game: '%payload.comment.body%'
-
   - title: Running a Python program
     description: Run a python program with a main method
     event: push
-    link: "{{ repoUrl }}/issues/1"
-    actions: 
+    link: '{{ repoUrl }}/issues/1'
+    actions:
       - type: respond
         with: 01-complete.md
         issue: 1
       - type: closeIssue
         issue: 1
       - type: createIssue
-        title: Using Variables 
+        title: Using Variables
         body: 02-variables.md
-
   - title: Using Variables
     description: Define variables with random input to simulate a die-roll
     event: issue_comment
-    link: "{{ repoUrl }}/issues/2"
-    actions: 
+    link: '{{ repoUrl }}/issues/2'
+    actions:
       - type: respond
         with: 02-multiple.md
         issue: 2
-        data: 
+        data:
           roll: '%payload.comment.body%'
-
   - title: Rolling multiple Dice
     description: Roll multiple dice and add their results
     event: push
-    link: "{{ repoUrl }}/issues/2"
+    link: '{{ repoUrl }}/issues/2'
     actions:
       - type: respond
         with: 02-complete.md
@@ -61,32 +56,30 @@ steps:
       - type: closeIssue
         issue: 2
       - type: createIssue
-        title: Adding Conditionals 
+        title: Adding Conditionals
         body: 03-conditionals.md
-
   - title: Adding Conditionals
     description: Add some flavor to your responses with conditionals
     event: issue_comment
-    link: "{{ repoUrl }}/issues/3"
-    actions: 
+    link: '{{ repoUrl }}/issues/3'
+    actions:
       - type: gate
         left: '%payload.comment.body%'
         operator: <
         right: 3
         else:
-        - type: respond
-          with: 03-unlucky.md
-          data: 
-            rollNum: '%payload.comment.body%'
+          - type: respond
+            with: 03-unlucky.md
+            data:
+              rollNum: '%payload.comment.body%'
       - type: respond
         with: 03-lucky.md
-        data: 
+        data:
           rollNum: '%payload.comment.body%'
-
   - title: Adding User Input
     description: Allow users to input the number and size of dice
     event: push
-    link: "{{ repoUrl }}/issues/3"
+    link: '{{ repoUrl }}/issues/3'
     actions:
       - type: respond
         with: 03-complete.md

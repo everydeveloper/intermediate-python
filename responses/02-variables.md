@@ -35,12 +35,14 @@ To use a package, we'll need to import it. At the top of the file, import the pa
 import random 
 ```
 
-In general, it's good practice to import all packages at the beginning of the script. Now let's use that package to randomize our `roll` variable. To get a random integer with the `random` package, we'll want to use the following format:
+In general, it's good practice to import all packages at the beginning of the script. Now let's use that package to randomize our `roll` variable.
+
+To get a random integer with the `random` package, we'll update the `roll` line like so:
 
 ```python
-random.randint(X,Y)
+roll = random.randint(1,6)
 ```
 
-where X and Y are the boundaries of the range you want your random integers to be in. Note that X, the beginning of the range and Y, and the end of the range, are inclusive bounds. Note that X (the beginning of the range) and Y (the end of the range), are inclusive bounds. This means the integers you put as X and Y will be part of possible values. Knowing that, try changing `roll` to equal any integer that is possible to roll on a six-sided die: 1, 2, 3, 4, 5 and 6. There's no need to change anything in the print statement, as we've already tied it to whatever our `roll` variable is. 
+The `random.randint` function takes two integers as parameters. In this case, since we want to emulate a six-sided die, we want to include the range of results that is possible: 1, 2, 3, 4, 5 and 6. Note that the beginning and the end of the range are inclusive bounds. That is, 1 and 6 are possible values, along with integers between them.
 
 Now run the code and put *the number* you rolled as a comment, and then we'll keep this tutorial *rolling*!
