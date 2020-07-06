@@ -76,6 +76,10 @@ steps:
         with: 03-lucky.md
         data:
           rollNum: '%payload.comment.body%'
+      - type: gate
+        left: '%payload.comment.body%'
+        operator: '>'
+        right: '2'
   - title: Adding User Input
     description: Allow users to input the number and size of dice
     event: push
