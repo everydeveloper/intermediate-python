@@ -67,11 +67,6 @@ steps:
         left: '%payload.comment.body%'
         operator: <
         right: 3
-        else:
-          - type: respond
-            with: 03-unlucky.md
-            data:
-              rollNum: '%payload.comment.body%'
       - type: respond
         with: 03-lucky.md
         data:
@@ -80,6 +75,11 @@ steps:
         left: '%payload.comment.body%'
         operator: '>'
         right: '2'
+      - type: respond
+        with: 03-unlucky.md
+        data:
+          rollNum: '%payload.comment.body%'
+
   - title: Adding User Input
     description: Allow users to input the number and size of dice
     event: push
