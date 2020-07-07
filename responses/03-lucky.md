@@ -1,4 +1,4 @@
-Wow, it only took {{ rollNum }} rolls? 🤩 You must be lucky! 🍀
+Wow, {{ rollNum }} rolls?!
 
 ## Adding User Input
 

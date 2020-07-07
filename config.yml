@@ -63,20 +63,9 @@ steps:
     event: issue_comment
     link: '{{ repoUrl }}/issues/3'
     actions:
-      - type: gate
-        left: '%payload.comment.body%'
-        operator: <
-        right: 3
       - type: respond
         with: 03-lucky.md
-        data:
-          rollNum: '%payload.comment.body%'
-      - type: gate
-        left: '%payload.comment.body%'
-        operator: '>'
-        right: '2'
-      - type: respond
-        with: 03-unlucky.md
+        issue: 3
         data:
           rollNum: '%payload.comment.body%'
 
